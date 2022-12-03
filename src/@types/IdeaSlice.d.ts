@@ -1,0 +1,3 @@
+type IdeaSlice = {
+    idea: any[];
+};

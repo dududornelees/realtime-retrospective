@@ -1,11 +1,11 @@
 import { Header } from "components";
 import * as P from "./props";
 
-export const Layout = ({ children }: P.Props) => {
+export const Layout = ({ className, children }: P.Props) => {
     return (
         <>
             <Header />
-            {children}
+            <main className={className}>{children}</main>
         </>
     );
 };

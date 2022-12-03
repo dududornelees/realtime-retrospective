@@ -1,0 +1,3 @@
+type RootStore = {
+    idea: IdeaSlice;
+};
