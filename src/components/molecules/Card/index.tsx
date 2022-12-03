@@ -1,11 +1,11 @@
-import { FaTimes } from "react-icons/fa";
+import { CardHeader } from "components";
 import * as P from "./props";
 
-export const Card = ({ idea }: P.Props) => {
+export const Card = ({ idea, ideas, setIdeas }: P.Props) => {
     return (
-        <div className="w-full rounded-md shadow-sm py-4 px-6 bg-yellow-100 mt-4 relative">
-            <p>{idea.title}</p>
-            <FaTimes className="absolute top-3 right-3" />
+        <div className="w-full rounded-md shadow-md p-3 bg-yellow-100 mt-4">
+            <CardHeader idea={idea} ideas={ideas} setIdeas={setIdeas} />
+            <p className="break-all text-sm">{idea.title}</p>
         </div>
     );
 };

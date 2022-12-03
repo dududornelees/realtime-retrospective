@@ -1,5 +1,5 @@
 export type Props = {
     title: string;
     ideas: Idea[];
-    setIdeas: any;
+    setIdeas: React.Dispatch<React.SetStateAction<Idea[]>>;
 };

@@ -1,5 +1,5 @@
 type Idea = {
-    id: number;
+    id: string;
     title: string;
-    voter: number;
+    votes: number;
 };

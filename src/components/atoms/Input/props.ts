@@ -1,4 +1,6 @@
 export type Props = {
-    onKeyUp: any;
+    value: string;
+    onKeyUp?: (e: any) => void;
+    onChange?: (e: any) => void;
     placeholder: string;
 };

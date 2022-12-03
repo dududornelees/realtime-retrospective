@@ -10,7 +10,7 @@ export const CardBox = ({ title }: P.Props) => {
             <TitleCard title={title} ideas={ideas} setIdeas={setIdeas} />
 
             {ideas.map((idea: Idea, index) => (
-                <Card key={index} idea={idea} />
+                <Card key={index} idea={idea} ideas={ideas} setIdeas={setIdeas} />
             ))}
         </div>
     );
