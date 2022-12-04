@@ -1,4 +1,4 @@
-export type Props = {
+type RetrospectiveCard = {
     id: string;
     title: string;
 };
