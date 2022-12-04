@@ -1,5 +1,10 @@
 import { Routes } from "routes";
+import { AuthContextProvider } from "providers";
 
 export const App = () => {
-    return <Routes />;
+    return (
+        <AuthContextProvider>
+            <Routes />
+        </AuthContextProvider>
+    );
 };
