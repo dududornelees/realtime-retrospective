@@ -1,11 +1,11 @@
 import { Header } from "components";
-import * as P from "./props";
+import { Outlet } from "react-router-dom";
 
-export const Layout = ({ className, children }: P.Props) => {
+export const Layout = () => {
     return (
         <>
             <Header />
-            <main className={className}>{children}</main>
+            <Outlet />
         </>
     );
 };
