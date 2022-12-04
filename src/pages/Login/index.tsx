@@ -1,18 +1,14 @@
 import { Navigate } from "react-router-dom";
-import { AuthService } from "services/Auth";
+import { LoginForm } from "components";
 import { useAuthContext } from "providers";
 
 export const Login = () => {
     const { logged } = useAuthContext();
 
-    const handleLoginWithGoogle = async () => {
-        await AuthService.loginWithGoogle();
-    };
-
     return !logged ? (
-        <div>
-            <button onClick={handleLoginWithGoogle}>Login com o Google</button>
-        </div>
+        <main className="h-[calc(100vh-4rem)] flex justify-center items-center">
+            <LoginForm />
+        </main>
     ) : (
         <Navigate to="/user/retrospectives" />
     );

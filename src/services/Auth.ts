@@ -1,5 +1,5 @@
 import { auth } from "firebase";
-import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, NextOrObserver, User } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, NextOrObserver, User, signOut } from "firebase/auth";
 
 export const AuthService = {
     isLoggedIn() {
@@ -13,5 +13,9 @@ export const AuthService = {
     async loginWithGoogle() {
         const provider = new GoogleAuthProvider();
         return await signInWithPopup(auth, provider);
+    },
+
+    async logout() {
+        return await signOut(auth);
     }
 };

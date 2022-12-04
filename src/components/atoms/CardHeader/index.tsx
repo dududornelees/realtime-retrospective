@@ -1,11 +1,12 @@
 import { FaTrashAlt, FaPlusCircle } from "react-icons/fa";
 import { handleDelete, handleVote } from "helpers";
+import { auth } from "firebase";
 import * as P from "./props";
 
 export const CardHeader = ({ idea, ideas, setIdeas }: P.Props) => {
     return (
         <div className="flex justify-between items-center mb-2">
-            <h6 className="text-xs">Eduardo Dorneles</h6>
+            <h6 className="text-xs">{auth.currentUser?.displayName}</h6>
 
             <div className="flex gap-1.5">
                 <FaTrashAlt

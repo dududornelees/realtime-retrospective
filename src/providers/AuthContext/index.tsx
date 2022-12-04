@@ -1,5 +1,5 @@
 import { useState, createContext, useContext } from "react";
-import { AuthService } from "services/Auth";
+import { AuthService } from "services";
 import * as P from "./props";
 
 export const AuthContext = createContext<P.ContextValue>({
